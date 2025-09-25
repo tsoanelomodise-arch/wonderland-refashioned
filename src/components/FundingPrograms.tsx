@@ -63,11 +63,11 @@ const FundingPrograms = () => {
   ];
 
   return (
-    <section id="programs" className="py-24 bg-muted/30">
+    <section id="programs" className="py-24 bg-primary/10">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Transformation Fund suite of investment products
+            Transformation Fund suite of funding programmes
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive funding solutions tailored to support transformation, innovation, and sustainable economic development
@@ -114,18 +114,39 @@ const FundingPrograms = () => {
           ))}
         </div>
         
-        <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Not sure which program fits your needs?</h3>
-            <p className="text-muted-foreground mb-6 text-lg">
+        <div className="bg-gradient-to-r from-primary to-primary-dark p-8 rounded-lg text-white text-center">
+          <h3 className="text-3xl font-bold mb-6">Platform Advantages Over Traditional Approaches</h3>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold">Coordination at Scale</h4>
+              <p className="text-white/90">Overcomes fragmentation and information failures that plague traditional MSME development programs.</p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold">Evidence-Based Iteration</h4>
+              <p className="text-white/90">Telemetry-driven platform enables real-time adjustment and continuous improvement based on actual outcomes.</p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold">Sustainable Economics</h4>
+              <p className="text-white/90">Network effects and shared infrastructure create sustainable unit economics and long-term viability.</p>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h4 className="text-2xl font-bold mb-4">Not sure which program fits your needs?</h4>
+            <p className="text-white/90 mb-6 text-lg">
               Our funding specialists will help you choose the perfect program and guide you through the application process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta">Take Assessment Quiz</Button>
-              <Button variant="outline">Schedule Consultation</Button>
+              <Button variant="hero" onClick={() => (document.getElementById('assessment-modal') as HTMLDialogElement)?.showModal()}>Take Assessment Quiz</Button>
+              <Button variant="hero-secondary" onClick={() => (document.getElementById('consultation-modal') as HTMLDialogElement)?.showModal()}>Schedule Consultation</Button>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+          
+          <Button variant="hero-secondary" className="mb-4">
+            Learn About Platform Architecture  →
+          </Button>
+        </div>
       </div>
     </section>
   );

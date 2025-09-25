@@ -32,13 +32,15 @@ const HeroSection = () => {
             
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
-                Upliftment,
+                Engineering an
                 <br />
-                <span className="text-accent-light">through inclusivity</span>
+                <span className="text-accent-light">inclusive microeconomic foundation</span>
+                <br />
+                for macroeconomic growth and social stability
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed">
-                Supporting entrepreneurs, SMEs, and transformation initiatives through strategic funding programs designed to drive economic growth and sustainable development.
+                A national platform for economic transformation that empowers thousands of firms and entrepreneurs with capital, skills, and market access to drive inclusive growth across South Africa.
               </p>
             </div>
             

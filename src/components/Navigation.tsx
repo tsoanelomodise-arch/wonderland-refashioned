@@ -14,12 +14,30 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#programs" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Funding Programs
-          </a>
-          <a href="#applications" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Applications
-          </a>
+          <div className="relative group">
+            <a href="#programs" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Funding Programs
+            </a>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="p-2">
+                <a href="#startup-grants" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Startup & Informal Business Grants</a>
+                <a href="#growth-loans" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Growth & Expansion Loans</a>
+                <a href="#equity-investment" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Equity & Co-Investment</a>
+                <a href="#blended-finance" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Blended Finance & Guarantees</a>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <a href="#applications" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Applications
+            </a>
+            <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="p-2">
+                <a href="/requirements" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Requirements</a>
+                <a href="#application-process" className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded">Application Process</a>
+              </div>
+            </div>
+          </div>
           <a href="#resources" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Resources
           </a>

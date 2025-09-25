@@ -44,8 +44,8 @@ All colors MUST be HSL.
 
     /* Design system tokens */
     --hero-gradient: linear-gradient(135deg, 
-      hsl(158 64% 25% / 0.95), 
-      hsl(158 64% 35% / 0.9));
+      hsl(158 64% 25% / 0.2), 
+      hsl(158 64% 35% / 0.2));
     
     --card-shadow: 0 4px 24px hsl(220 9% 15% / 0.08);
     --card-shadow-hover: 0 8px 32px hsl(220 9% 15% / 0.12);
@@ -109,8 +109,8 @@ All colors MUST be HSL.
     --ring: 158 64% 45%;
 
     --hero-gradient: linear-gradient(135deg, 
-      hsl(220 15% 9% / 0.95), 
-      hsl(158 64% 25% / 0.9));
+      hsl(220 15% 9% / 0.2), 
+      hsl(158 64% 25% / 0.2));
     
     --card-shadow: 0 4px 24px hsl(0 0% 0% / 0.2);
     --card-shadow-hover: 0 8px 32px hsl(0 0% 0% / 0.3);
