@@ -6,11 +6,13 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <div className="flex items-center">
-          <img 
-            src={transfundLogo} 
-            alt="Transformation Fund" 
-            className="h-10 w-auto"
-          />
+          <a href="/" className="hover:opacity-80 transition-opacity">
+            <img 
+              src={transfundLogo} 
+              alt="Transformation Fund" 
+              className="h-10 w-auto"
+            />
+          </a>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">

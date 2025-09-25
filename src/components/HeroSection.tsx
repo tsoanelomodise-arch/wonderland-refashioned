@@ -56,7 +56,7 @@ const HeroSection = () => {
           
           {/* Right Column - Impact Stats */}
           <div className="space-y-6">
-            <Card className="bg-white/50 border-white/20 backdrop-blur-lg shadow-2xl">
+            <Card className="bg-white/90 border-white/20 backdrop-blur-lg shadow-2xl">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
                   <span className="w-2 h-2 bg-accent rounded-full"></span>

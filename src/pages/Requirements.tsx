@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const Requirements = () => {
   const requirements = [
@@ -52,7 +52,6 @@ const Requirements = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       <main>
         {/* Hero Section */}
@@ -122,6 +121,8 @@ const Requirements = () => {
           </div>
         </section>
       </main>
+      
+      <Footer />
     </div>
   );
 };

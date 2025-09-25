@@ -5,6 +5,7 @@ import SuccessStories from "@/components/SuccessStories";
 import FAQ from "@/components/FAQ";
 import Resources from "@/components/Resources";
 import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <FAQ />
       <Resources />
       <FinalCTA />
+      <Footer />
     </main>
   );
 };
