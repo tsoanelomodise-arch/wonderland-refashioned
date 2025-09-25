@@ -7,58 +7,41 @@ const FundingPrograms = () => {
     {
       id: "startup-grants",
       title: "Startup and Informal Business Grants",
+      price: "R50K - R500K",
       description: "Startup grants or \"vouchers\" for early-stage and informal enterprises",
       badge: "POPULAR",
-      badgeColor: "bg-accent text-accent-foreground",
-      features: [
-        "Seed capital to entrepreneurs who lack initial funding or collateral",
-        "Tailored to businesses that cannot navigate complex loan applications", 
-        "Easy-access grants with minimal paperwork"
-      ],
+      badgeColor: "bg-yellow-500 text-black",
+      idealFor: "Early-stage entrepreneurs who lack initial funding or collateral and need accessible capital to start their business journey.",
+      commonRoles: "New Business Owner, Informal Trader, First-time Entrepreneur, Community Business",
+      talentSource: "From grassroots communities and emerging markets across South Africa.",
       ctaText: "Apply Now",
       footerNote: "No application fees"
     },
     {
       id: "growth-loans",
       title: "Growth and Expansion Loans",
+      price: "R500K - R10M",
       description: "Patient, concessionary loans for scaling up established MSMEs, delivered with flexible terms and performance-based disbursements.",
       badge: "RECOMMENDED", 
-      badgeColor: "bg-primary text-primary-foreground",
-      features: [
-        "Enable growing firms to invest in capacity (new equipment, larger facilities, hiring staff)",
-        "Fulfill large contracts that require upfront capital",
-        "Aimed at businesses that have outgrown micro-finance but are not served by commercial banks"
-      ],
+      badgeColor: "bg-yellow-500 text-black",
+      idealFor: "Growing firms looking to invest in capacity expansion, equipment, larger facilities, and staff hiring.",
+      commonRoles: "SME Owner, Manufacturing Business, Service Provider, Established Entrepreneur",
+      talentSource: "From businesses that have outgrown micro-finance but are not yet served by commercial banks.",
       ctaText: "Apply Now",
       footerNote: "Fast-track available"
     },
     {
       id: "equity-investment",
       title: "Equity and Co-Investment Instruments", 
+      price: "R10M - R50M",
       description: "Equity funding for larger-scale ventures and high-growth companies, particularly in priority sectors.",
       badge: "EQUITY",
-      badgeColor: "bg-blue-600 text-white",
-      features: [
-        "Support black industrialists and innovative startups needing substantial capital injections",
-        "Addresses enterprises that are beyond the scope of small loans",
-        "Strategic investor with development mandate"
-      ],
+      badgeColor: "bg-yellow-500 text-black",
+      idealFor: "Black industrialists and innovative startups needing substantial capital injections for high-growth ventures.",
+      commonRoles: "Industrial Entrepreneur, Tech Startup Founder, Manufacturing Executive, Innovation Leader",
+      talentSource: "From priority sectors and high-growth companies with substantial scaling potential.",
       ctaText: "Apply Now",
       footerNote: "Pitch deck required"
-    },
-    {
-      id: "blended-finance",
-      title: "Blended Finance and Guarantees",
-      description: "Blended financing solutions that combine public and private capital",
-      badge: "SECURE",
-      badgeColor: "bg-emerald-600 text-white", 
-      features: [
-        "Encourage commercial banks and other investors to extend finance to target segments",
-        "Reduce risk through partial credit guarantees and risk-sharing facilities",
-        "Aimed at situations where obstacle is risk perception and cost, not absolute absence of capital"
-      ],
-      ctaText: "Apply Now",
-      footerNote: "Due diligence required"
     }
   ];
 
@@ -74,42 +57,61 @@ const FundingPrograms = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {programs.map((program) => (
-            <Card key={program.id} className="group hover:shadow-[var(--card-shadow-hover)] transition-all duration-300 hover:-translate-y-2 border-0 shadow-[var(--card-shadow)]">
-              <CardHeader className="space-y-4">
-                <div className="flex items-start justify-between">
-                  <Badge className={program.badgeColor}>
-                    {program.badge}
-                  </Badge>
-                </div>
-                <CardTitle className="text-2xl group-hover:text-primary transition-colors">
-                  {program.title}
-                </CardTitle>
-                <CardDescription className="text-base leading-relaxed">
-                  {program.description}
-                </CardDescription>
-              </CardHeader>
+            <Card key={program.id} className="relative bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6">
+              <div className="absolute top-4 right-4">
+                <Badge className={program.badgeColor}>
+                  {program.badge}
+                </Badge>
+              </div>
               
-              <CardContent className="space-y-6">
-                <ul className="space-y-3">
-                  {program.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="pt-4 border-t">
-                  <Button variant="cta" className="w-full mb-3">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {program.description}
+                  </p>
+                </div>
+
+                <div className="py-4 border-b border-gray-200">
+                  <div className="text-4xl font-bold text-gray-900">
+                    {program.price}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Ideal For</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {program.idealFor}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Common Roles</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {program.commonRoles}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Talent Source</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {program.talentSource}
+                  </p>
+                </div>
+
+                <div className="pt-4">
+                  <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
                     {program.ctaText}
                   </Button>
-                  <p className="text-sm text-muted-foreground text-center">
+                  <p className="text-sm text-gray-500 text-center mt-2">
                     {program.footerNote}
                   </p>
                 </div>
-              </CardContent>
+              </div>
             </Card>
           ))}
         </div>

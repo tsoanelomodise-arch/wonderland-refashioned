@@ -2,6 +2,8 @@ import logoDtic from "@/assets/logo-dtic.png";
 import logoNef from "@/assets/logo-nef.png";
 import logoSeda from "@/assets/logo-seda.png";
 import logoIdc from "@/assets/logo-idc.png";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Footer = () => {
   const partners = [
@@ -36,20 +38,32 @@ const Footer = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
-          {partners.map((partner, index) => (
-            <div 
-              key={index} 
-              className="bg-white/95 backdrop-blur p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 w-full max-w-48 h-32 flex items-center justify-center"
-            >
-              <img 
-                src={partner.logo} 
-                alt={partner.name}
-                className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </div>
+        <Carousel 
+          className="w-full max-w-6xl mx-auto"
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-4">
+            {partners.concat(partners).map((partner, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
+                <div className="bg-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 h-32 flex items-center justify-center">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
         
         <div className="mt-16 pt-8 border-t border-white/20 text-center">
           <p className="text-white/60 text-sm">
