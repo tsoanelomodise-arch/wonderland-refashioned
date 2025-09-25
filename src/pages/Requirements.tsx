@@ -65,7 +65,11 @@ const Requirements = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Everything you need to know to prepare a successful funding application
               </p>
-              <Button variant="cta" size="lg">
+              <Button 
+                variant="cta" 
+                size="lg"
+                onClick={() => (document.getElementById('assessment-modal') as HTMLDialogElement)?.showModal()}
+              >
                 Start Your Application
               </Button>
             </div>
@@ -107,7 +111,12 @@ const Requirements = () => {
               Our application specialists provide free consultation to help you gather the right documentation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta">Schedule Consultation</Button>
+              <Button 
+                variant="cta"
+                onClick={() => (document.getElementById('consultation-modal') as HTMLDialogElement)?.showModal()}
+              >
+                Schedule Consultation
+              </Button>
               <Button variant="outline">Download Checklist</Button>
             </div>
           </div>

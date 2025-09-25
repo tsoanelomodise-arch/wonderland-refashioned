@@ -1,26 +1,31 @@
 import successStoriesBg from "@/assets/success-stories-bg.jpg";
+import technovaLogo from "@/assets/logo-technova.png";
+import greenharvestLogo from "@/assets/logo-greenharvest.png";
+import urbanstyleLogo from "@/assets/logo-urbanstyle.png";
 
 const SuccessStories = () => {
   const stories = [
     {
-      company: "TechSolutions SA",
-      industry: "Software Development",
+      company: "TechNova Solutions",
+      industry: "Technology",
       quote: "Fund Ignite's SME Development Fund enabled us to expand our team from 8 to 45 employees and secure major enterprise contracts. The mentorship program was invaluable.",
       metrics: [
         { value: "R2.5M", label: "Funding Received" },
         { value: "37", label: "Jobs Created" },
-        { value: "450%", label: "Revenue Growth" }
-      ]
+        { value: "340%", label: "Revenue Growth" }
+      ],
+      logo: technovaLogo
     },
     {
-      company: "Green Energy Co",
-      industry: "Renewable Energy",
-      quote: "The Transformation Fund helped us achieve Level 4 B-BBEE status while expanding our solar installation capacity. We've become a leading player in renewable energy.",
+      company: "GreenHarvest Foods",
+      industry: "Agriculture", 
+      quote: "The Transformation Fund helped us achieve sustainable growth while expanding our organic food distribution. We've become a leading player in sustainable agriculture.",
       metrics: [
-        { value: "R8.2M", label: "Funding Received" },
-        { value: "120", label: "Jobs Created" },
-        { value: "Level 4", label: "B-BBEE Status" }
-      ]
+        { value: "R1.8M", label: "Funding Received" },
+        { value: "28", label: "Jobs Created" },
+        { value: "250%", label: "Market Expansion" }
+      ],
+      logo: greenharvestLogo
     }
   ];
 
@@ -49,8 +54,12 @@ const SuccessStories = () => {
             <div key={index} className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20 hover:shadow-xl hover:bg-white/98 transition-all duration-300">
               {/* Company Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
-                  <div className="w-8 h-8 bg-primary-light rounded-lg"></div>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden bg-white border border-gray-200">
+                  <img 
+                    src={story.logo} 
+                    alt={`${story.company} logo`}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">{story.company}</h3>

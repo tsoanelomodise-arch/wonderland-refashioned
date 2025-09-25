@@ -19,13 +19,19 @@ const FinalCTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="lg" className="text-lg px-8 py-6">
+              <Button 
+                variant="cta" 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => (document.getElementById('assessment-modal') as HTMLDialogElement)?.showModal()}
+              >
                 Start Your Application
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="text-lg px-8 py-6 bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white"
+                onClick={() => (document.getElementById('consultation-modal') as HTMLDialogElement)?.showModal()}
               >
                 Schedule Consultation
               </Button>
