@@ -1,3 +1,5 @@
+import successStoriesBg from "@/assets/success-stories-bg.jpg";
+
 const SuccessStories = () => {
   const stories = [
     {
@@ -23,14 +25,20 @@ const SuccessStories = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section 
+      className="py-24 relative bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${successStoriesBg})` }}
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Success Stories
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-white/80">
             Real impact, real transformation, real results
           </p>
         </div>
@@ -38,7 +46,7 @@ const SuccessStories = () => {
         {/* Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {stories.map((story, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-md transition-shadow duration-300">
+            <div key={index} className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20 hover:shadow-xl hover:bg-white/98 transition-all duration-300">
               {/* Company Header */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
