@@ -64,7 +64,7 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 gap-8">
                 {impactStats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    <div className="text-3xl md:text-4xl font-bold mb-2" style={{ color: '#ffb81c' }}>
                       {stat.value}
                     </div>
                     <div className="text-white/80 text-sm font-medium">
@@ -79,13 +79,13 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <div className="text-lg font-bold text-accent-light">R50K - R50M</div>
+                  <div className="text-lg font-bold" style={{ color: '#ffb81c' }}>R50K - R50M</div>
                   <div className="text-white/70 text-sm">Funding Range</div>
                 </CardContent>
               </Card>
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <div className="text-lg font-bold text-accent-light">14 Days</div>
+                  <div className="text-lg font-bold" style={{ color: '#ffb81c' }}>14 Days</div>
                   <div className="text-white/70 text-sm">Fast Approval</div>
                 </CardContent>
               </Card>
