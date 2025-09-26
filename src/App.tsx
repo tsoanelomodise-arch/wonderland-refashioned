@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Requirements from "./pages/Requirements";
+import StartupGrants from "./pages/StartupGrants";
 import Navigation from "./components/Navigation";
 import Modal from "@/components/Modal";
 import AssessmentQuiz from "@/components/AssessmentQuiz";
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/requirements" element={<Requirements />} />
+          <Route path="/startup-grants" element={<StartupGrants />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
