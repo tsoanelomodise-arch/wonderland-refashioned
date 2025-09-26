@@ -48,7 +48,7 @@ const HeroSection = () => {
               <Button variant="hero">
                 Apply for Funding
               </Button>
-              <Button variant="hero-secondary">
+              <Button className="bg-white text-primary hover:bg-primary hover:text-white border-2 border-white hover:border-primary transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
                 Explore Programs
               </Button>
             </div>

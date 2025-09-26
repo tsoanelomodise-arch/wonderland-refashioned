@@ -58,17 +58,11 @@ const FundingPrograms = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {programs.map((program) => (
-            <Card key={program.id} className="relative bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6">
-              <div className="absolute top-4 right-4">
-                <Badge className={program.badgeColor}>
-                  {program.badge}
-                </Badge>
-              </div>
-              
+          {programs.map((program, index) => (
+            <Card key={program.id} className={`relative bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6 ${index === 0 ? 'md:col-span-1' : ''}`}>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#ffb81c' }}>
                     {program.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -104,7 +98,7 @@ const FundingPrograms = () => {
                 </div>
 
                 <div className="pt-4">
-                  <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
+                  <Button className="w-full font-semibold py-2 px-4 rounded-lg transition-colors duration-200" style={{ backgroundColor: '#ffb81c', color: '#000' }}>
                     {program.ctaText}
                   </Button>
                   <p className="text-sm text-gray-500 text-center mt-2">

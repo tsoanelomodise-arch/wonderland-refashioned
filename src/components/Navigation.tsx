@@ -46,6 +46,9 @@ const Navigation = () => {
           <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             About
           </a>
+          <a href="https://sa-transformationfund.co.za/transformationreport.html" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Impact Report
+          </a>
         </div>
         
         <div className="flex items-center space-x-4">
